@@ -3,9 +3,9 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-from database import create_tables
-from exceptions import BookNotFound, DuplicateBook
-from router import router
+from books_api.database import create_tables
+from books_api.exceptions import BookNotFound, DuplicateBook
+from books_api.router import router
 
 
 @asynccontextmanager

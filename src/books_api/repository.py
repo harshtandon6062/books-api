@@ -1,5 +1,5 @@
 from sqlmodel import Session, select
-from models import Book
+from books_api.models import Book
 
 
 class BookRepository:

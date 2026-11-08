@@ -6,13 +6,13 @@ The code is split into layers so each one has a single job:
 
 | File | Responsibility |
 |---|---|
-| `books_api/main.py` | Creates the app, sets up tables on startup, maps errors to HTTP responses |
-| `books_api/router.py` | HTTP routes and dependency wiring |
-| `books_api/service.py` | Business rules |
-| `books_api/repository.py` | Database queries |
-| `books_api/models.py` | Table and request schemas |
-| `books_api/database.py` | Engine and session setup |
-| `books_api/exceptions.py` | Domain errors |
+| `src/books_api/main.py` | Creates the app, sets up tables on startup, maps errors to HTTP responses |
+| `src/books_api/router.py` | HTTP routes and dependency wiring |
+| `src/books_api/service.py` | Business rules |
+| `src/books_api/repository.py` | Database queries |
+| `src/books_api/models.py` | Table and request schemas |
+| `src/books_api/database.py` | Engine and session setup |
+| `src/books_api/exceptions.py` | Domain errors |
 
 ## Setup
 
@@ -26,9 +26,10 @@ uv sync
 
 ## Run
 
+Run from the project root:
+
 ```bash
-cd books_api
-uv run uvicorn main:app --reload
+uv run uvicorn books_api.main:app --reload
 ```
 
 The API runs at <http://127.0.0.1:8000>, with interactive docs at <http://127.0.0.1:8000/docs>. A `books.db` SQLite file is created in the directory you start the server from.

@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, Query
 from sqlmodel import Session
 
-from database import get_session
-from models import Book, BookCreate, BookUpdate
-from repository import BookRepository
-from service import BookService
+from books_api.database import get_session
+from books_api.models import Book, BookCreate, BookUpdate
+from books_api.repository import BookRepository
+from books_api.service import BookService
 
 router = APIRouter(prefix="/books", tags=["books"])
 

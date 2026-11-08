@@ -1,6 +1,6 @@
-from models import Book, BookCreate, BookUpdate
-from repository import BookRepository
-from exceptions import BookNotFound, DuplicateBook
+from books_api.models import Book, BookCreate, BookUpdate
+from books_api.repository import BookRepository
+from books_api.exceptions import BookNotFound, DuplicateBook
 
 
 class BookService:

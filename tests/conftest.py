@@ -2,8 +2,8 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlmodel import SQLModel, Session, create_engine
 
-from database import get_session
-from main import app
+from books_api.database import get_session
+from books_api.main import app
 
 test_engine = create_engine(
     "sqlite:///test.db",
