@@ -1,0 +1,11 @@
+[project]
+name = "books-api"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.148.0",
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "sqlmodel>=0.0.48",
+    "uvicorn>=0.54.0",
+]
